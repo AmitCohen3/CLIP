@@ -357,7 +357,6 @@ class CLIP(nn.Module):
         x = x.permute(1, 0, 2)  # NLD -> LND
         return x
 
-    # Change to encode_embeddings
     def encode_embeddings(self, embedded_text, eot_indices):
         x = self.transformer(embedded_text)
         x = x.permute(1, 0, 2)  # LND -> NLD
